@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maileroo"
+version = "1.0.0"
+description = "This package contains the Python SDK to help you integrate with Maileroo's email sending API efficiently and effectively."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Maileroo", email = "support@maileroo.com" }]
+dependencies = [
+    "requests>=2.28.0",
+    "python-magic>=0.4.27; platform_system != 'Windows'",
+]
+
+[project.urls]
+Homepage = "https://maileroo.com"
+Source = "https://github.com/maileroo/maileroo-python-sdk"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["maileroo*"]
